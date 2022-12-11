@@ -48,6 +48,10 @@ button {
   padding: 10px 22px;
   cursor: pointer;
 }
+button:hover {
+  color: #9775fa;
+  border-color: #9775fa;
+}
 .heroBtn {
   font-size: 1.2rem;
 }
@@ -56,4 +60,24 @@ ul.Sofa .sofa,
 ul.All .all {
   padding-bottom: 4px;
   border-bottom: 2px solid var(--primary);
+}
+
+.btn-uni-01 {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.btn-uni-02 {
+  border: none;
+  color: #797979;
+  font-size: 1rem;
+}
+.uniImg {
+  transition: transform 500ms ease-in-out;
+}
+.btn-bestSeller {
+  padding: 0.6rem 1.8rem;
+  font-size: 1rem;
+  margin-top: 6px;
 }

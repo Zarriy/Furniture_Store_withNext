@@ -80,11 +80,13 @@
   text-align: center;
   margin: 4rem;
 }
-.newIn h2 {
-  font-size: 2.4rem;
+.newIn h2,
+.best h2 {
+  font-size: 2rem;
   font-weight: 500;
 }
-.newIn p {
+.newIn p,
+.best p {
   color: var(--ligher);
   margin-top: -14px;
 }
@@ -101,7 +103,8 @@
 .newIn ul li {
   cursor: pointer;
 }
-.productsNew {
+.productsNew,
+.bestProducts {
   display: flex;
   gap: 2rem;
   width: 88%;
@@ -124,4 +127,101 @@
 
 .pCards:hover img {
   transform: translateY(-10px);
+}
+.uniSection {
+  height: 550px;
+  background-color: #c8f6d8;
+  display: flex;
+  align-items: center;
+  padding: 0 8rem;
+  position: relative;
+  z-index: 0;
+}
+.uniLeft {
+  margin-top: -4rem;
+}
+.uniLeft h2 {
+  font-size: 2.6rem;
+}
+.uniLeft p {
+  color: #797979;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.uniLeft h3 {
+  position: relative;
+  margin-left: 2rem;
+}
+.uniLeft h3::before {
+  content: "";
+  width: 1.4rem;
+  height: 0.1rem;
+  background-color: #797979;
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: -30px;
+}
+.uniImage {
+  width: 100%;
+}
+.uniImage img {
+  transform: scaleX(-1);
+  top: 30%;
+  left: 40%;
+  width: 55%;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+}
+.best {
+  text-align: center;
+  margin: 4rem auto;
+}
+.bestProducts {
+  margin-left: 8rem;
+}
+.bestProduct {
+  width: 300px;
+  padding: 2rem 0;
+  background-color: white;
+  box-shadow: 0 4px 12px 1px #00000015;
+  position: relative;
+}
+
+.bestProduct::before {
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--primary);
+  content: "Our Best";
+  display: block;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 0.8rem;
+}
+.bestProduct img {
+  width: 90%;
+  height: 70%;
+  margin-top: -2rem;
+}
+.bestProduct h4 {
+  color: var(--ligher);
+}
+.bestProduct p {
+  color: black;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+.uniColor {
+  display: flex;
+  gap: 20px;
 }

@@ -2,8 +2,10 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import MyApp from "./_app";
-import HeroSection from "./components/Hero/hero";
-import NewIn from "./components/Hero/newHome";
+import HeroSection from "./components/Home-sections/hero";
+import NewIn from "./components/Home-sections/newHome";
+import Uni from "./components/Home-sections/uni";
+import BestSelling from "./components/Home-sections/bestSellings";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       </Head>
       <HeroSection />
       <NewIn />
+      <Uni />
+      <BestSelling />
     </div>
   );
 }
