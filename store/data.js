@@ -1,12 +1,13 @@
-import image4 from "../../public/furn-11:1.png";
-import image2 from "../../public/furn-12:1.png";
-import image1 from "../../public/furn_store-01.png";
-import image3 from "../../public/product-3-1.png";
+import image4 from "../public/furn-11:1.png";
+import image2 from "../public/furn-12:1.png";
+import image1 from "../public/furn_store-01.png";
+import image3 from "../public/product-3-1.png";
 
-import uniBlackImage from "../../public/sofa-col/black.png";
-import uniDarkImage from "../../public/sofa-col/dark.png";
-import uniLightImage from "../../public/sofa-col/light.png";
-import uniWhiteImage from "../../public/sofa-col/white.png";
+import uniBlackImage from "../public/sofa-col/black.png";
+import uniDarkImage from "../public/sofa-col/dark.png";
+import uniLightImage from "../public/sofa-col/light.png";
+import uniWhiteImage from "../public/sofa-col/white.png";
+
 export default [
   {
     title: "Brand New Sofa",

@@ -1,8 +1,7 @@
 import classes from "../../../styles/Home.module.css";
 import BestCard from "../reuseable/bestSellerCards";
-import image1 from "../../../public/product-3-1.png";
-import image2 from "../../../public/furn-11:1.png";
-import data from "../data";
+
+import data from "../../../store/data";
 
 export default function BestSelling() {
   return (

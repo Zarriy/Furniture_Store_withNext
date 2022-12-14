@@ -1,17 +1,22 @@
 import classes from "../../../styles/Home.module.css";
-import { useState } from "react";
 import NewCard from "../reuseable/cards-1";
-import data from "../data";
+import data from "../../../store/data";
+import { useSelector, useDispatch } from "react-redux";
+import { dataSelector } from "../../../store";
 
 export default function NewIn() {
-  const [newData, setNewData] = useState(data);
+  // const [newData, setNewData] = useState(data);
+  const newData = useSelector((state) => state.dataReducer.data);
+
+  const dispatch = useDispatch();
 
   const showModel = (event) => {
     const target = event.target.innerText;
     event.target.parentElement.className = target;
-    setNewData((prevData) => data.filter((data) => data.type === target));
+    // setNewData((prevData) => data.filter((data) => data.type === target));
+    dispatch(dataSelector("updateList", target));
     if (target === "All") {
-      setNewData(data);
+      dispatch(dataSelector("all"));
     }
   };
 

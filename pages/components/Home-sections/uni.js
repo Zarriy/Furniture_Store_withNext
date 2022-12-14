@@ -1,18 +1,21 @@
 import classes from "../../../styles/Home.module.css";
-import { uniImages } from "../data";
-import { useState } from "react";
+import { uniImages } from "../../../store/data";
 import Button from "../reuseable/button";
 import Image from "next/image";
-import { imageConfigDefault } from "next/dist/shared/lib/image-config";
+import { useSelector, useDispatch } from "react-redux";
+import { imageActioner } from "../../../store/uniImg";
 
 export default function Uni() {
-  const [uniIm, setUniIm] = useState(uniImages[0].uniImage);
+  const uniIm = useSelector((state) => state.imageReducer.Image);
+  const setUniIm = useDispatch();
+  // const [uniIm, setUniIm] = useState(uniImages[0].uniImage);
 
   const changeImage = (img) => {
     uniImages.map((img) => (img.selected = false));
     const obj = uniImages.find((elem) => elem.bg === img.bg);
     obj.selected = true;
-    setUniIm(obj.uniImage);
+    setUniIm(imageActioner(obj.uniImage));
+    // setUniIm(obj.uniImage);
   };
 
   return (

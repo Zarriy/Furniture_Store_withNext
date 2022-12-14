@@ -1,5 +1,5 @@
-import Image from "next/image";
 import classes from "../../../styles/Home.module.css";
+import Image from "next/image";
 import Button from "./button";
 
 export default function BestCard(props) {

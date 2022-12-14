@@ -343,10 +343,10 @@
 .priceRange input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  margin-top: -8px;
+  margin-top: -4px;
   background-color: var(--primary);
-  height: 1rem;
-  width: 1rem;
+  height: 0.6rem;
+  width: 0.6rem;
   border-radius: 50%;
 }
 .priceRange span {

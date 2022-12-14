@@ -4,7 +4,7 @@ import classes from "../styles/Home.module.css";
 import Image from "next/image";
 import homeIcon from "../public/icons/home-outline.svg";
 import Link from "next/link";
-import data from "./components/data";
+import data from "../store/data";
 import NewCard from "./components/reuseable/cards-1";
 
 export default function Living() {
