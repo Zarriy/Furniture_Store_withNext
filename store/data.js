@@ -14,6 +14,9 @@ export default [
     type: "Chair",
     bg: "#86ADB933",
     image: image1,
+    productColors: ["black"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     id: 1,
     price: 399,
   },
@@ -22,22 +25,31 @@ export default [
     bg: "#F8FFCB",
     type: "Chair",
     image: image2,
+    productColors: ["yellow"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     id: 2,
     price: 288,
   },
   {
     title: "Best Selling ",
     type: "Chair",
+    productColors: ["#ed820e"],
     bg: "#F3CAA3",
     image: image3,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     id: 3,
     price: 374,
   },
   {
     title: "strang Behaviour",
     type: "Sofa",
+    productColors: ["#f2dcad"],
     bg: "#F6F2E6",
     image: image4,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     id: 4,
     price: 878,
   },

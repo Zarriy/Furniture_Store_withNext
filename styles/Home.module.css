@@ -354,3 +354,35 @@
   margin-top: 2rem;
   color: var(--ligher);
 }
+.productsPage {
+  margin: 2rem 0;
+}
+.productHero {
+  display: flex;
+
+  height: 60%;
+}
+.ProductImage {
+  background-color: var(--primary);
+  padding: 2rem 0;
+  width: 60%;
+  text-align: center;
+  border-radius: 0 250px 250px 0;
+}
+.ProductImage img {
+  width: 450px;
+  height: auto;
+}
+.productAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 38%;
+  padding: 2rem 2rem;
+}
+.productAbout p {
+  color: var(--ligher);
+}
+.productAbout h3 {
+  font-size: 2.8rem;
+}

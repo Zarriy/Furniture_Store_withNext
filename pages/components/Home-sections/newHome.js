@@ -3,6 +3,8 @@ import NewCard from "../reuseable/cards-1";
 import data from "../../../store/data";
 import { useSelector, useDispatch } from "react-redux";
 import { dataSelector } from "../../../store";
+import { useRouter } from "next/router";
+import ProductPage from "../../products/[pid]";
 
 export default function NewIn() {
   // const [newData, setNewData] = useState(data);
@@ -10,6 +12,11 @@ export default function NewIn() {
 
   const dispatch = useDispatch();
 
+  const router = useRouter();
+
+  const clickHandler = (prod) => {
+    router.push("/products/" + prod.id);
+  };
   const showModel = (event) => {
     const target = event.target.innerText;
     event.target.parentElement.className = target;
@@ -42,6 +49,7 @@ export default function NewIn() {
             bg={prod.bg}
             title={prod.title}
             key={prod.id}
+            clickHandle={() => clickHandler(prod)}
           />
         ))}
       </div>
