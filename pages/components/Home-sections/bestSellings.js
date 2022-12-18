@@ -1,9 +1,19 @@
 import classes from "../../../styles/Home.module.css";
 import BestCard from "../reuseable/bestSellerCards";
-
+import { useRouter } from "next/router";
 import data from "../../../store/data";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../store/cart";
 
 export default function BestSelling() {
+  const router = useRouter();
+  function clickRouter(id) {
+    router.push("/products/" + id);
+  }
+  const dispatch = useDispatch();
+  const addToCartHandler = (product) => {
+    dispatch(addToCart(product));
+  };
   return (
     <div className={classes.best}>
       <h2>Our Best Selling</h2>
@@ -17,6 +27,8 @@ export default function BestSelling() {
               alt={bestSell.title}
               title={bestSell.title}
               price={bestSell.price}
+              uponClick={() => clickRouter(bestSell.id)}
+              addingToCart={() => addToCartHandler(bestSell)}
             />
           ) : null;
         })}

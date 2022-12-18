@@ -4,13 +4,20 @@ import image from "../../public/furn-11:1.png";
 import { useRouter } from "next/router";
 import data from "../../store/data";
 import { BLOCKED_PAGES } from "next/dist/shared/lib/constants";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../store/cart";
 
 export default function ProductPage(props) {
   const router = useRouter();
   const { pid } = router.query;
+  const dispatch = useDispatch();
+
+  const addToCartHandler = (product) => {
+    dispatch(addToCart(product));
+  };
 
   const product = data.find((products) => products.id == pid);
-  console.log(pid, product);
+
   return (
     <div className={classes.productsPage}>
       <div className={classes.productHero}>
@@ -40,7 +47,7 @@ export default function ProductPage(props) {
               ></span>
             ))}
           </p>
-          <button>Add to Cart</button>
+          <button onClick={() => addToCartHandler(product)}>Add to Cart</button>
         </div>
       </div>
     </div>

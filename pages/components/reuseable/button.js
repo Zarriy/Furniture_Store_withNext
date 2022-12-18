@@ -1,3 +1,7 @@
 export default function Button(props) {
-  return <button className={props.class}>{props.title}</button>;
+  return (
+    <button className={props.class} onClick={props.clickHandler}>
+      {props.title}
+    </button>
+  );
 }

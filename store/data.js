@@ -19,6 +19,7 @@ export default [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     id: 1,
     price: 399,
+    quantity: 1,
   },
   {
     title: "Antique Style Stool",
@@ -30,6 +31,7 @@ export default [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     id: 2,
     price: 288,
+    quantity: 1,
   },
   {
     title: "Best Selling ",
@@ -41,6 +43,7 @@ export default [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     id: 3,
     price: 374,
+    quantity: 1,
   },
   {
     title: "strang Behaviour",
@@ -52,20 +55,32 @@ export default [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     id: 4,
     price: 878,
+    quantity: 1,
   },
 ];
 
 export const uniImages = [
-  { bg: "black", uniImage: uniBlackImage, id: 21, selected: true },
-  { bg: "#70543e", uniImage: uniDarkImage, id: 22 },
+  {
+    bg: "black",
+    uniImage: uniBlackImage,
+    id: 21,
+    selected: true,
+    price: 549,
+    quantity: 1,
+  },
+  { bg: "#70543e", uniImage: uniDarkImage, id: 22, price: 499, quantity: 1 },
   {
     bg: "#adb5bd",
     uniImage: uniLightImage,
     id: 23,
+    price: 589,
+    quantity: 1,
   },
   {
     bg: "#e9ecef",
     uniImage: uniWhiteImage,
     id: 24,
+    price: 499,
+    quantity: 1,
   },
 ];

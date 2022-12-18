@@ -4,8 +4,12 @@ import logo from "../../../public/furn_logo.png";
 import searchIcon from "../../../public/search-outline.svg";
 import cartIcon from "../../../public/cart-outline.svg";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 function Header(props) {
+  const cartItems = useSelector((state) => state.cartReducer);
+  console.log(cartItems);
+
   return (
     <header className={styles.header}>
       <div className={styles.logoDiv}>
@@ -39,12 +43,6 @@ function Header(props) {
           className="cartIconA"
           onClick={props.cartH}
         />
-        {/* <button>
-          <ion-icon
-            name="cart-outline"
-            onClick={() => console.log("this works")}
-          ></ion-icon>
-        </button> */}
       </div>
     </header>
   );

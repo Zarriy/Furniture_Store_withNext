@@ -17,6 +17,9 @@ export default function Living() {
     console.log(e.target.value);
     setPriceRange(e.target.value);
   };
+  const handleClick = (id) => {
+    router.push("/products/" + id);
+  };
 
   return (
     <div>
@@ -70,6 +73,7 @@ export default function Living() {
               title={item.title}
               key={item.id}
               bg={item.bg}
+              clickHandle={() => handleClick(item.id)}
             />
           ))}
         </div>

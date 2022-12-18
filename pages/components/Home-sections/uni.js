@@ -4,18 +4,30 @@ import Button from "../reuseable/button";
 import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
 import { imageActioner } from "../../../store/uniImg";
+import Link from "next/link";
+import { addToCart } from "../../../store/cart";
 
 export default function Uni() {
-  const uniIm = useSelector((state) => state.imageReducer.Image);
-  const setUniIm = useDispatch();
+  const product = useSelector((state) =>
+    state.imageReducer.product.find((elem) => elem.selected)
+  );
+  const products = useSelector((state) => state.imageReducer.product);
+
+  const dispatch = useDispatch();
+
   // const [uniIm, setUniIm] = useState(uniImages[0].uniImage);
 
   const changeImage = (img) => {
-    uniImages.map((img) => (img.selected = false));
-    const obj = uniImages.find((elem) => elem.bg === img.bg);
-    obj.selected = true;
-    setUniIm(imageActioner(obj.uniImage));
+    // uniImages.map((img) => (img.selected = false));  // mutation of data, not recommended.
+
+    const imageObject = products.find((elem) => elem.bg === img.bg);
+
+    dispatch(imageActioner(imageObject.id));
     // setUniIm(obj.uniImage);
+  };
+
+  const addCartHandler = (product) => {
+    dispatch(addToCart(product));
   };
 
   return (
@@ -26,9 +38,9 @@ export default function Uni() {
           This sofa is designed for providing you ultimate pleasure and delight.
           Furnish your home with us and stay in fashion.
         </p>
-        <h3>$ 550</h3>
+        <h3>$ {product.price}</h3>
         <div className={classes.uniColor}>
-          {uniImages.map((image) => (
+          {products.map((image) => (
             <div
               style={{
                 width: "14px",
@@ -44,12 +56,18 @@ export default function Uni() {
             ></div>
           ))}
         </div>
-        <Button title="Add to Cart" class="btn-uni btn-uni-01" />
-        <Button title="View all Products" class="btn-uni btn-uni-02" />
+        <Button
+          title="Add to Cart"
+          class="btn-uni btn-uni-01"
+          clickHandler={() => addCartHandler(product)}
+        />
+        <Link href="/living">
+          <Button title="View all Products" class="btn-uni btn-uni-02" />
+        </Link>
       </div>
       <div className={classes.uniImage}>
         <Image
-          src={uniIm}
+          src={product.uniImage}
           alt="this is the second image"
           className="uni-img2"
         />

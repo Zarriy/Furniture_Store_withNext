@@ -214,6 +214,7 @@
   width: 90%;
   height: 70%;
   margin-top: -2rem;
+  cursor: pointer;
 }
 .bestProduct h4 {
   color: var(--ligher);
