@@ -61,24 +61,34 @@ export default [
 
 export const uniImages = [
   {
+    title: "Catch 22 Sofa",
     bg: "black",
-    uniImage: uniBlackImage,
+    image: uniBlackImage,
     id: 21,
     selected: true,
     price: 549,
     quantity: 1,
   },
-  { bg: "#70543e", uniImage: uniDarkImage, id: 22, price: 499, quantity: 1 },
   {
+    title: "Catch 22 Sofa",
+    bg: "#70543e",
+    image: uniDarkImage,
+    id: 22,
+    price: 499,
+    quantity: 1,
+  },
+  {
+    title: "Catch 22 Sofa",
     bg: "#adb5bd",
-    uniImage: uniLightImage,
+    image: uniLightImage,
     id: 23,
     price: 589,
     quantity: 1,
   },
   {
+    title: "Catch 22 Sofa",
     bg: "#e9ecef",
-    uniImage: uniWhiteImage,
+    image: uniWhiteImage,
     id: 24,
     price: 499,
     quantity: 1,

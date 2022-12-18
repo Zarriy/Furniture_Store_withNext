@@ -67,7 +67,7 @@ export default function Uni() {
       </div>
       <div className={classes.uniImage}>
         <Image
-          src={product.uniImage}
+          src={product.image}
           alt="this is the second image"
           className="uni-img2"
         />

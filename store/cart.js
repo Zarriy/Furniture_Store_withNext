@@ -16,7 +16,10 @@ export default function cartReducer(state = initialState, action) {
       if (alreadyPresent) {
         return state.map((item) =>
           item.id === action.payload.id
-            ? { ...item, quantity: item.quantity + 1 }
+            ? {
+                ...item,
+                quantity: item.quantity + 1,
+              }
             : item
         );
       }
