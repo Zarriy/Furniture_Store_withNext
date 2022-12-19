@@ -14,8 +14,10 @@
 }
 .navList ul {
   list-style: none;
+  position: relative;
   display: flex;
   gap: 40px;
+  z-index: 9999;
 }
 
 .iconsD img {
@@ -339,16 +341,16 @@
 }
 
 .priceRange input[type="range"]::-webkit-slider-runnable-track {
-  background: var(--primary);
-  height: 0.1rem;
+  background: #ced4da;
+  height: 0.2rem;
 }
 .priceRange input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   margin-top: -4px;
   background-color: var(--primary);
-  height: 0.6rem;
-  width: 0.6rem;
+  height: 0.8rem;
+  width: 0.8rem;
   border-radius: 50%;
 }
 .priceRange span {

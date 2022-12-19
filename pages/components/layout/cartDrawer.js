@@ -1,12 +1,15 @@
 import classes from "../../../styles/Home.module.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import CartItem from "../reuseable/cartItem";
 import Link from "next/link";
 
 export default function CartDrawer(props) {
   const cartItems = useSelector((state) => state.cartReducer);
+  const dispatch = useDispatch();
 
-  const handleCheckoutClick = () => {};
+  const handleCheckoutClick = () => {
+    setTimeout(() => dispatch({ type: "checkout" }), 1500);
+  };
 
   const cartToDom = () => {
     return cartItems.map((item) => {

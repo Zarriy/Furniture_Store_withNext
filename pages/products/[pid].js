@@ -31,7 +31,7 @@ export default function ProductPage(props) {
           <h2>{product.title}</h2>
           <p>{product.description}</p>
           <h3>$ {product.price}</h3>
-          <p>
+          <p style={{ position: "relative" }}>
             Color:{" "}
             {product.productColors.map((color) => (
               <span
@@ -41,7 +41,9 @@ export default function ProductPage(props) {
                   display: "inline-block",
                   borderRadius: "50%",
                   backgroundColor: color,
-                  marginLeft: "1rem",
+                  marginLeft: ".6rem",
+                  position: "absolute",
+                  top: "0px",
                 }}
                 key={Math.random()}
               ></span>

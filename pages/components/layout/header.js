@@ -8,10 +8,9 @@ import { useSelector } from "react-redux";
 
 function Header(props) {
   const cartItems = useSelector((state) => state.cartReducer);
-  console.log(cartItems);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} `}>
       <div className={styles.logoDiv}>
         <Link href="/">
           <Image src={logo} alt="Furniture Store at your click" />
@@ -30,7 +29,11 @@ function Header(props) {
           </li>
         </ul>
       </div>
-      <div className={styles.iconsD}>
+      <div
+        className={`${styles.iconsD} ${
+          cartItems.length > 0 ? "cartAdded" : null
+        }`}
+      >
         <Image
           src={searchIcon}
           alt="search icon"

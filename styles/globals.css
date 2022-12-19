@@ -85,3 +85,22 @@ ul.All .all {
 .activeLink {
   color: var(--primary);
 }
+.cartAdded {
+  position: relative;
+}
+.cartAdded::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary);
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  right: 0%;
+}
+.fixedaa {
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+  background-color: white;
+}

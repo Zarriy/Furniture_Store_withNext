@@ -24,6 +24,8 @@ export default function cartReducer(state = initialState, action) {
         );
       }
       return [...state, action.payload];
+    case "checkout":
+      return [];
   }
   return state;
 }
