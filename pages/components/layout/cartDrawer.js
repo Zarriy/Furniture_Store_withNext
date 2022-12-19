@@ -1,9 +1,12 @@
 import classes from "../../../styles/Home.module.css";
 import { useSelector } from "react-redux";
 import CartItem from "../reuseable/cartItem";
+import Link from "next/link";
 
 export default function CartDrawer(props) {
   const cartItems = useSelector((state) => state.cartReducer);
+
+  const handleCheckoutClick = () => {};
 
   const cartToDom = () => {
     return cartItems.map((item) => {
@@ -36,7 +39,15 @@ export default function CartDrawer(props) {
         Total Price:
         <span className={classes.totalCartPrice}> $ {getTotal}</span>{" "}
       </p>
-      <button>Check Out</button>
+      <Link href="/checkout">
+        <button
+          className="checkoutBtn"
+          style={{ width: "100%" }}
+          onClick={handleCheckoutClick}
+        >
+          Check Out
+        </button>
+      </Link>
     </div>
   );
 }

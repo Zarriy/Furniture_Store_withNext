@@ -11,9 +11,10 @@ export default function Layout({ children }) {
   useEffect(() => {
     document.addEventListener("click", function (e) {
       if (
-        cartOpen &&
-        !e.target.closest(".cartDrawer") &&
-        !e.target.closest(".cartIconA")
+        (cartOpen &&
+          !e.target.closest(".cartDrawer") &&
+          !e.target.closest(".cartIconA")) ||
+        e.target.closest(".checkoutBtn")
       ) {
         setCartOpen(false);
       }

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useRouter } from "next/router";
 import classes from "../styles/Home.module.css";
 import Image from "next/image";
@@ -6,19 +5,27 @@ import homeIcon from "../public/icons/home-outline.svg";
 import Link from "next/link";
 import data from "../store/data";
 import NewCard from "./components/reuseable/cards-1";
+import { useSelector, useDispatch } from "react-redux";
+import { colorUpdate, priceDomUpdate } from "../store/productsPage";
 
 export default function Living() {
-  const [priceRange, setPriceRange] = useState(599);
+  // const [priceRange, setPriceRange] = useState(599);
+  const dataRedux = useSelector((state) => state.productReducer);
+  const dispatch = useDispatch();
 
   const router = useRouter();
   const id = router.query.pageId;
 
   const priceChangeHandler = (e) => {
-    console.log(e.target.value);
-    setPriceRange(e.target.value);
+    console.log(e.target.value, dataRedux.priceRange, dataRedux.data);
+    dispatch(priceDomUpdate(e.target.value));
   };
   const handleClick = (id) => {
     router.push("/products/" + id);
+  };
+
+  const colorFilterUpdate = (value) => {
+    dispatch(colorUpdate(value));
   };
 
   return (
@@ -50,6 +57,7 @@ export default function Living() {
                     marginBottom: "2rem",
                     cursor: "pointer",
                   }}
+                  onClick={() => colorFilterUpdate(items.bg)}
                 />
               ))}
             </div>
@@ -58,16 +66,17 @@ export default function Living() {
             <h3>Price Range</h3>
             <input
               type="range"
-              value={priceRange}
+              value={dataRedux.priceRange}
               min="299"
               max="999"
+              step="35"
               onChange={priceChangeHandler}
             />
-            <span>{priceRange}</span>
+            <span>{dataRedux.priceRange}</span>
           </div>
         </div>
         <div className={classes.productsBox}>
-          {data.map((item) => (
+          {dataRedux.data.map((item) => (
             <NewCard
               img={item.image}
               title={item.title}

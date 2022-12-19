@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import data from "./data";
 import { uniReducer } from "./uniImg";
 import cartReducer from "./cart";
+import productReducer from "./productsPage";
 import { combineReducers } from "@reduxjs/toolkit";
 
 export const dataSelector = (type, parameter) => {
@@ -31,6 +32,7 @@ const rootReducer = combineReducers({
   dataReducer,
   imageReducer: uniReducer,
   cartReducer,
+  productReducer,
 });
 
 let store = configureStore({ reducer: rootReducer });

@@ -422,3 +422,10 @@
 .totalCartPrice {
   font-weight: 600;
 }
+.checkoutPage {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

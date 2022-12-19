@@ -18,7 +18,7 @@ export default [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     id: 1,
-    price: 399,
+    price: 988,
     quantity: 1,
   },
   {
@@ -42,7 +42,7 @@ export default [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     id: 3,
-    price: 374,
+    price: 488,
     quantity: 1,
   },
   {
@@ -54,7 +54,7 @@ export default [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     id: 4,
-    price: 878,
+    price: 788,
     quantity: 1,
   },
 ];
