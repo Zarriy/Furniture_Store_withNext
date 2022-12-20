@@ -103,6 +103,7 @@ export function getStaticPaths() {
 
 export function getStaticProps(context) {
   const query = context.params.id;
+  console.log(context);
   return {
     props: {},
   };
