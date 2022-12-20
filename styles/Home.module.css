@@ -3,6 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 999999;
 }
 .logoDiv {
   width: 125px;
@@ -43,6 +48,7 @@
   border-top-left-radius: 32px;
   display: flex;
   align-items: center;
+  margin-top: 5rem;
 }
 .hero1 {
   margin-left: 6rem;
@@ -424,7 +430,7 @@
   font-weight: 600;
 }
 .checkoutPage {
-  height: 80vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
