@@ -5,8 +5,9 @@
   justify-content: space-evenly;
   position: fixed;
   top: 0;
+  padding: 0 2rem;
   background-color: white;
-  width: 100%;
+  width: 100vw;
   z-index: 999999;
 }
 .logoDiv {
@@ -302,6 +303,7 @@
   background-position: center;
   flex-direction: column;
   color: white;
+  margin-top: 5rem;
 }
 
 .pageHeader h2 {
@@ -364,7 +366,8 @@
   color: var(--ligher);
 }
 .productsPage {
-  margin: 2rem 0;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 .productHero {
   display: flex;
@@ -435,6 +438,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 3rem;
 }
 
 @media screen and (max-width: 1020px) {
@@ -518,7 +522,7 @@
   }
   .header {
     justify-content: space-between;
-    margin: auto 20px;
+    width: 100%;
   }
 
   .pCards {
