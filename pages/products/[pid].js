@@ -8,32 +8,28 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cart";
 
 export default function ProductPage(props) {
-  const router = useRouter();
-  const { pid } = router.query;
   const dispatch = useDispatch();
 
   const addToCartHandler = (product) => {
     dispatch(addToCart(product));
   };
 
-  const product = data.find((products) => products.id == pid);
-
   return (
     <div className={classes.productsPage}>
       <div className={classes.productHero}>
         <div
           className={classes.ProductImage}
-          style={{ backgroundColor: product.bg }}
+          style={{ backgroundColor: props.product.bg }}
         >
-          <Image src={product.image} alt="product page image" />
+          <Image src={props.product.image} alt="product page image" />
         </div>
         <div className={classes.productAbout}>
-          <h2>{product.title}</h2>
-          <p>{product.description}</p>
-          <h3>$ {product.price}</h3>
+          <h2>{props.product.title}</h2>
+          <p>{props.product.description}</p>
+          <h3>$ {props.product.price}</h3>
           <p style={{ position: "relative" }}>
             Color:{" "}
-            {product.productColors.map((color) => (
+            {props.product.productColors.map((color) => (
               <span
                 style={{
                   width: "20px",
@@ -49,9 +45,34 @@ export default function ProductPage(props) {
               ></span>
             ))}
           </p>
-          <button onClick={() => addToCartHandler(product)}>Add to Cart</button>
+          <button onClick={() => addToCartHandler(props.product)}>
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
   );
+}
+
+export function getStaticPaths() {
+  return {
+    paths: [
+      { params: { pid: "1" } },
+      { params: { pid: "2" } },
+      { params: { pid: "3" }, params: { pid: "4" } },
+    ],
+    fallback: false, // can also be true or 'blocking'
+  };
+}
+export function getStaticProps(context) {
+  // const router = useRouter();
+  // const { pid } = router.query;
+  const pid = context.params.pid;
+
+  const product = data.find((products) => products.id == pid);
+
+  return {
+    // Passed to the page component as props
+    props: { product },
+  };
 }

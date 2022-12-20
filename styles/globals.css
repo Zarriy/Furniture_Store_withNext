@@ -114,4 +114,12 @@ ul.All .all {
   html {
     font-size: 14px;
   }
+  footer img {
+    max-width: 36%;
+    height: auto;
+  }
+  footer p {
+    margin: auto 20px;
+    text-align: center;
+  }
 }

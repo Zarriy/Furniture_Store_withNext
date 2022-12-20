@@ -8,7 +8,7 @@ import NewCard from "./components/reuseable/cards-1";
 import { useSelector, useDispatch } from "react-redux";
 import { colorUpdate, priceDomUpdate } from "../store/productsPage";
 
-export default function Living() {
+export default function Living(props) {
   // const [priceRange, setPriceRange] = useState(599);
   const dataRedux = useSelector((state) => state.productReducer);
   const dispatch = useDispatch();
@@ -89,4 +89,21 @@ export default function Living() {
       </div>
     </div>
   );
+}
+export function getStaticPaths() {
+  return {
+    paths: [
+      { params: { pageId: "living" } },
+      { params: { pageId: "bedroom" } },
+      { params: { pageId: "kitchen" } },
+    ],
+    fallback: false,
+  };
+}
+
+export function getStaticProps(context) {
+  const query = context.params.id;
+  return {
+    props: {},
+  };
 }
