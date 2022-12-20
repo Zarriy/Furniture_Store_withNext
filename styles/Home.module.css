@@ -63,7 +63,7 @@
 .heroImg {
   transform: scaleX(-1);
   width: 600px;
-  height: 577px;
+  height: auto;
   margin: 4rem 2rem 0 0;
   position: relative;
 }
@@ -430,4 +430,142 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+@media screen and (max-width: 1020px) {
+  .hero2::before {
+    right: 16%;
+  }
+}
+@media screen and (max-width: 880px) {
+  .hero {
+    flex-direction: column;
+    height: 660px;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .hero1 {
+    padding: 2rem 3rem;
+    margin: 0 auto;
+  }
+  .hero1 h1 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    width: 360px;
+    line-height: 50px;
+  }
+  .hero2 {
+    margin-top: -5rem;
+  }
+  .hero2::before {
+    top: 45%;
+    right: 26%;
+  }
+  .heroImg {
+    width: 480px;
+  }
+  .productsNew {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .uniSection {
+    height: 450px;
+  }
+  .bestProducts {
+    margin-left: 4rem;
+  }
+  .newIn ul {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 684px) {
+  .hero2::before {
+    right: 24%;
+  }
+  .productsNew {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bestProduct {
+    width: 40%;
+  }
+  .bestProduct::before {
+    width: 46px;
+    height: 46px;
+    font-size: 0.7rem;
+  }
+  .bestProduct img {
+    width: 80%;
+    height: 60%;
+  }
+  .navList {
+    display: none;
+  }
+  .header {
+    justify-content: space-between;
+    margin: auto 30px;
+  }
+  .cartDrawer {
+    width: 40%;
+  }
+  .pCards {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 570px) {
+  .uniSection {
+    flex-direction: column;
+    height: 580px;
+    padding: 2rem 6rem;
+  }
+  .uniLeft {
+    margin: 0;
+  }
+  .uniLeft h2 {
+    font-size: 2rem;
+  }
+  .uniImage img {
+    top: 60%;
+    left: 12%;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .heroImg {
+    width: 400px;
+  }
+  .hero2::before {
+    right: 18%;
+    top: 44%;
+  }
+  .hero {
+    height: 600;
+  }
+  .hero1 h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    width: 260px;
+    line-height: 40px;
+    padding: 1rem 0;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .productsNew {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .uniImage img {
+    top: 66%;
+  }
+  .uniSection {
+    padding: 2rem 4rem;
+  }
+  .bestProducts {
+    flex-direction: column;
+    width: 100%;
+  }
+  .bestProduct {
+    width: 80%;
+  }
 }
