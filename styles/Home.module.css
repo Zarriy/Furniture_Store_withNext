@@ -236,15 +236,15 @@
   height: 80vh;
   width: 26%;
   background-color: white;
-  z-index: 4;
-  position: absolute;
-  right: 0px;
+  position: fixed;
+  right: 0%;
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   transition: transform 260ms linear;
+  z-index: 999999;
 }
 .cartDrawer button:hover {
   background-color: var(--primary);
@@ -484,6 +484,9 @@
   .productsDiv {
     margin: 2rem 3rem;
   }
+  .cartDrawer {
+    width: 40%;
+  }
 }
 @media screen and (max-width: 684px) {
   .hero2::before {
@@ -511,9 +514,7 @@
     justify-content: space-between;
     margin: auto 20px;
   }
-  .cartDrawer {
-    width: 40%;
-  }
+
   .pCards {
     width: 100%;
   }
@@ -595,5 +596,8 @@
   }
   .bestProduct {
     width: 80%;
+  }
+  .cartDrawer {
+    width: 50%;
   }
 }

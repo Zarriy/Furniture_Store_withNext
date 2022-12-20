@@ -10,7 +10,7 @@ export default function Checkout() {
   const priceRef = useRef(0);
   useEffect(() => {
     animation(0, cartPrice, 10);
-  }, []);
+  }, [cartPrice]);
 
   const animation = (number, target, duration) => {
     if (number < target) {

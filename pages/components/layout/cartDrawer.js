@@ -32,7 +32,9 @@ export default function CartDrawer(props) {
   return (
     <div
       className={`${classes.cartDrawer} cartDrawer`}
-      style={{ transform: `translateX(${props.transX}%)` }}
+      style={{
+        transform: `translateX(${props.transX}%)`,
+      }}
     >
       <h2>Cart</h2>
       <div className={classes.cartDrawerProd}>
